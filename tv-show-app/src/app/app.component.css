@@ -1,0 +1,27 @@
+input {
+  width: 40%;
+  height: 25px;
+  border: 1px solid grey;
+  margin: 0px;
+}
+button {
+  background-color: #3265B2;
+  color: white;
+  height: 29px;
+  border: 1px solid grey;
+  margin: 0px;
+}
+
+.center {
+  margin: auto;
+  background-color: lightgray;
+  width: 50%;
+}
+
+.left {
+  background-color: gray;
+  float: left;
+  height: 100px;
+}
+
+
