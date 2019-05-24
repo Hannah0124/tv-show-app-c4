@@ -1,0 +1,14 @@
+.box {
+  background-color: lightgray;
+  text-align: left;
+  width: 80%;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 2%;
+}
+
+img {
+  float: left;
+  height: 100px;
+}

@@ -1,3 +1,18 @@
-<p>
-  show-result works!
-</p>
+<div class="center">
+  <div>
+    <span class="left">
+        <img [src]='tv.image' />
+    </span>
+  </div>
+  <div class="box">
+      <h2>{{tv.title}}</h2>
+      <ul>
+        <li>Rating: {{tv.rating}}</li>
+        <li>Genres: {{tv.genres}}</li>
+        <li>Run Time: {{tv.runtime}}</li>
+        <li>Schedule: {{tv.schedule}} ({{tv.timezone}})</li>
+        <li>Official Site: {{tv.officialSite}}</li>
+        <li>summary: {{tv.summary}}</li>
+      </ul>
+  </div>
+</div>
