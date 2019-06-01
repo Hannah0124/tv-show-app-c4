@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IShowResult } from '../ishow-result';
+import { ShowService } from '../show/show.service';
 
 @Component({
   selector: 'app-show-result',
@@ -7,24 +8,27 @@ import { IShowResult } from '../ishow-result';
   styleUrls: ['./show-result.component.css']
 })
 export class ShowResultComponent implements OnInit {
-  tv: IShowResult
+  tv: IShowResult // auto import
+  constructor(private showService: ShowService) {
 
-  constructor() {
-    // update dummy data based on http://api.tvmaze.com/search/shows?q=girls
-    this.tv = {
-      title: "Girls",
-      rating: 6.7,
-      genres: "Drama, Romance",
-      runtime: 30,
-      schedule: "22:00",
-      timezone: "America/New_York",
-      officialSite: "http://www.hbo.com/girls",
-      summary: "This Emmy winning series is a comic look at the assorted humiliations and rare triumphs of a group of girls in their 20s.",
-      image: "http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg"
-    }
+
+    // update dummy data based on http://api.tvmaze.com/shows/82
+    // this.tv = {
+    //   name: "Game of Thrones",
+    //   rating: 9.2,
+    //   genres: "Drama, Adventure, Fantasy",
+    //   premiered: '2011-04-17',
+    //   status: "Ended",
+    //   schedule: "21:00",
+    //   timezone: "America/New_York",
+    //   officialSite: "http://www.hbo.com/game-of-thrones",
+    //   summary: "Based on the bestselling book series A Song of Ice and Fire by George R.R. Martin, this sprawling new HBO drama is set in a world where summers span decades and winters can last a lifetime. From the scheming south and the savage eastern lands, to the frozen north and ancient Wall that protects the realm from the mysterious darkness beyond, the powerful families of the Seven Kingdoms are locked in a battle for the Iron Throne. This is a story of duplicity and treachery, nobility and honor, conquest and triumph. In the Game of Thrones, you either win or you die.",
+    //   image: "http://static.tvmaze.com/uploads/images/original_untouched/190/476117.jpg"
+    // }
   }
 
   ngOnInit() {
+    this.showService.getShowResult('Game of Thrones').subscribe(data => this.tv = data);
   }
 
 }

@@ -1,18 +1,23 @@
-<div class="center">
-  <div>
-    <span class="left">
-        <img [src]='tv.image' />
-    </span>
-  </div>
-  <div class="box">
-      <h2>{{tv.title}}</h2>
-      <ul>
-        <li>Rating: {{tv.rating}}</li>
-        <li>Genres: {{tv.genres}}</li>
-        <li>Run Time: {{tv.runtime}}</li>
-        <li>Schedule: {{tv.schedule}} ({{tv.timezone}})</li>
-        <li>Official Site: {{tv.officialSite}}</li>
-        <li>summary: {{tv.summary}}</li>
-      </ul>
+<div class="topinfo">
+    <h2 class="title">{{tv.name}}</h2>
+    <section>Premiered: {{tv.premiered}} | Status: {{tv.status}}</section>
+    <section>Rating: {{tv.rating}} | Genres: {{tv.genres}}</section>
+  <div class="box"> 
+      <span class="left">
+          <img [src]='tv.image' />
+      </span>    
+      <div class="rightbox">
+          <ul style="list-style: none;">
+            <li class="contents"><b>Schedule: </b>{{tv.schedule}} ({{tv.timezone}})</li>
+            <li class="contents"><b>Official Site: </b><a href="{{tv.officialSite}}">{{tv.network}}</a></li>
+            <!-- <li class="contents"><b>Official Site:</b> {{tv.officialSite}}</li> -->
+            <br>
+            <div>
+              <h3>Summary</h3>
+              <!-- how to get innerHTML -->
+              <p id="summary" [innerHTML]="tv.summary"></p> 
+            </div>
+          </ul>
+      </div>
   </div>
 </div>
