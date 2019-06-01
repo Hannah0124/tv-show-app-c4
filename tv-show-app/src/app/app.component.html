@@ -1,15 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <nav class="fixed-top">
+  <mat-toolbar color="primary">
+    TV Shows
+  </mat-toolbar>
+  <div>Explore fun TV shows, right now!</div>
+  <div>
+    <app-tv-search></app-tv-search>
+  </div>
+
+  <mat-card>
+    <h2>TV series</h2>
+    <app-show-result></app-show-result>
+  </mat-card>
+
+  <div class="bottom"> 
+    <div><h3>Cast</h3></div>  
+    <div><h3>Episode List</h3></div>
+  </div>
+
+</div>
+
+
+ <!-- <nav class="fixed-top">
     TV Shows
     <div class="searchBar">
         <input type="text" placeholder="Titles">
         <button id="searchBtn" type="submit">Search</button>
     </div>
-  </nav>
-  <app-show-result></app-show-result>
-  <div class="bottom"> 
-    <div><h3>Cast</h3></div>
-    <div><h3>Episode List</h3></div>
-  </div>
-</div>
+  </nav> -->

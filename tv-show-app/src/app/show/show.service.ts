@@ -36,9 +36,13 @@ export class ShowService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getShowResult(name: string) {
+  getShowResult(search: string) {
+    let uriParams = ''
+    if (typeof search === 'string') {
+      uriParams = `q=${search}`
+    }
     return this.httpClient.get<IShowResultData>(
-      `${environment.baseUrl}api.tvmaze.com/singlesearch/shows?q=${name}&appid=${environment.appId}`
+      `${environment.baseUrl}api.tvmaze.com/singlesearch/shows?${uriParams}&appid=${environment.appId}`
     ).pipe(map(data => this.transformtoIShowResult(data)))
   }
 

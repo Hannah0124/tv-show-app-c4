@@ -1,4 +1,4 @@
-<div class="topinfo">
+<div class="topinfo" *ngIf="tv">
     <h2 class="title">{{tv.name}}</h2>
     <section>Premiered: {{tv.premiered}} | Status: {{tv.status}}</section>
     <section>Rating: {{tv.rating}} | Genres: {{tv.genres}}</section>
@@ -9,8 +9,8 @@
       <div class="rightbox">
           <ul style="list-style: none;">
             <li class="contents"><b>Schedule: </b>{{tv.schedule}} ({{tv.timezone}})</li>
+            <!-- Update URL -->
             <li class="contents"><b>Official Site: </b><a href="{{tv.officialSite}}">{{tv.network}}</a></li>
-            <!-- <li class="contents"><b>Official Site:</b> {{tv.officialSite}}</li> -->
             <br>
             <div>
               <h3>Summary</h3>
