@@ -5,12 +5,11 @@
   </mat-toolbar>
   <div>Explore fun TV shows, right now!</div>
   <div>
-    <app-tv-search></app-tv-search>
+    <app-tv-search (searchEvent)="doSearch($event)"></app-tv-search>
   </div>
 
   <mat-card>
-    <h2>TV series</h2>
-    <app-show-result></app-show-result>
+    <app-show-result [tv]="showResult"></app-show-result>
   </mat-card>
 
   <div class="bottom"> 

@@ -5,6 +5,11 @@
   margin: 0;
 } 
 
+mat-card {
+  margin: 50px;
+  padding: 5px;
+  height: 500px;
+}
 /* .fixed-top {
   position: fixed;
   top: 0;
@@ -44,8 +49,8 @@ button {
 } 
 */
 .bottom {
-  position: absolute;
-  top: 700px;
+  position: relative;
+  top: 30px;
   left: 100px;
   width: 80%;
 } 

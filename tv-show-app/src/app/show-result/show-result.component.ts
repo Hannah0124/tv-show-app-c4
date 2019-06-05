@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IShowResult } from '../ishow-result';
 import { ShowService } from '../show/show.service';
 
@@ -8,9 +8,8 @@ import { ShowService } from '../show/show.service';
   styleUrls: ['./show-result.component.css']
 })
 export class ShowResultComponent implements OnInit {
-  tv: IShowResult // auto import
-  constructor(private showService: ShowService) {
-
+  @Input() tv: IShowResult // auto import
+  constructor() {
 
     // update dummy data based on http://api.tvmaze.com/shows/82
     // this.tv = {
@@ -28,7 +27,6 @@ export class ShowResultComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.showService.getShowResult('Game of Thrones').subscribe(data => this.tv = data);
-  }
 
+  }
 }
