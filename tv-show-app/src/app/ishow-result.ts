@@ -1,4 +1,5 @@
 export interface IShowResult {
+  id: number
   name: string
   rating: number
   genres: string

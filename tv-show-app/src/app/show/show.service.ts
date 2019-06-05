@@ -5,6 +5,7 @@ import { IShowResult } from '../ishow-result';
 import {map} from 'rxjs/operators'; // added manually
 
 interface IShowResultData {
+  id: number,
   name: string,
   rating: {
     average: number
@@ -49,6 +50,7 @@ export class ShowService {
 
   private transformtoIShowResult(data: IShowResultData) : IShowResult {
     return {
+      id: data.id,
       name: data.name,
       rating: data.rating.average,
       genres: data.genres, // all elements from one array.
