@@ -2,7 +2,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
 
-
 @Component({
   selector: 'app-title-search',
   templateUrl: './title-search.component.html',
@@ -10,6 +9,7 @@ import { debounceTime } from 'rxjs/operators';
 })
 export class TitleSearchComponent implements OnInit {
 @Output() searchEvent = new EventEmitter<string>();
+
 
   search = new FormControl('',[Validators.minLength(3)])
 
