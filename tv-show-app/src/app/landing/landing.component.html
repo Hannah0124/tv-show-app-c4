@@ -1,0 +1,36 @@
+<div>
+    <h3> Welcome to Brows, the best way to browse TV Shows on the web.</h3>
+    <p class="align-purple">To navigate:</p>
+    <span>
+  
+      <ol class="align-purple">
+        <li>Simply type the name of the show you're searching for in the above search field.</li>
+        <li>Learn all about your favorite show!</li>
+      </ol>
+      <br>
+    </span>
+  
+    <mat-divider></mat-divider>
+  
+    <div *ngIf="home">
+      <h2>Popular TV Shows !</h2>
+      <div class="grid-container container" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="20px">   
+        <div class="col-xs-6 col-sm-6 col-md-3">
+          <a href="{{home.officialSite1}}"><img [src]='home.image1'/></a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3">
+          <a href="{{home.officialSite2}}"><img [src]='home.image2'/></a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3">
+          <a href="{{home.officialSite3}}"><img [src]='home.image3'/></a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3">
+          <a href="{{home.officialSite4}}"><img [src]='home.image4'/></a>
+        </div>    
+      </div>
+    </div> 
+  </div>
+  
+  <!-- <mat-divider></mat-divider> -->
+  
+  

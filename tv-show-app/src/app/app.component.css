@@ -1,65 +1,32 @@
 * {
-  font-family: arial,sans-serif;
+  /* font-family: arial,sans-serif; */
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 } 
 
 mat-card {
+  height: 800px;
+  padding: 20px;
+  margin: 30px;
   margin-left: 100px;
   margin-right: 100px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding: 5px;
-  height: 500px;
-}
-/* .fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  background-color: black;
-  color: white;
-  font-size: 30px;
-  text-align: left;
-  padding: 10px;
 }
 
-.searchBar {
-  position: fixed;
-  float: right;
-  top: 5px;
-  right: 700px;
-  left: 700px;
-  margin-right: 5px;
-  margin-left: 30px;
-  width: 100%;
+.mat-tab-group {
+  margin-bottom: 48px;
+  background-color: #F8F8F8;
 }
 
-input {
-  width: 200px;
-  height: 29px;
-  border: 2px solid #3265B2;
-}
-
-button {
-  background-color: #3265B2;
-  color: white;
-  height: 29px;
-  padding: 5px;
-  border: 1px solid #3265B2;
-} 
-*/
 .bottom {
   position: relative;
-  top: 30px;
-  left: 100px;
+  top: 5px;
+  left: 110px;
   width: 80%;
+  margin-right: 110px;
 } 
 
-
 h3 {
-  background-color: lightgray;
+  font-size: 25px;
+  padding-top: 30px;
 }
-

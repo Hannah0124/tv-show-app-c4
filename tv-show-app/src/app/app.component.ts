@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IShowResult } from './ishow-result';
-import { ShowService } from './show/show.service';
+import { ITvShowApp } from './i-tv-show-app';
+import { TvService } from './tv/tv.service';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +9,14 @@ import { ShowService } from './show/show.service';
 })
 export class AppComponent {
   title = 'tv-show-app';
-  showResult: IShowResult
-  constructor(private showService: ShowService) {
+  showResult: ITvShowApp
+  constructor(private tvService: TvService) {
   }
-  doSearch(searchValue) {
-    if (searchValue) {
+  doSearch(searchValue){
+    if(searchValue) {
       const userInput = searchValue.split(',').map(s => s.trim());
-      this.showService.getShowResult(userInput[0]).subscribe(data => this.showResult = data)
-      //(userInput[0], userInput.length > 1 ? userInput[1] : undefined)
+      this.tvService.getShowResult 
+      (userInput[0]).subscribe(data => this.showResult = data)
     }
   }
 }

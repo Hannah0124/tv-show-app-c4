@@ -4,27 +4,30 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShowResultComponent } from './show-result/show-result.component';
-import { ShowService } from './show/show.service'; // added automatically
+import { TvService } from './tv/tv.service';
 import { HttpClientModule} from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // add manually
-
-import {MatButtonModule, MatToolbarModule, MatIconModule, MatCardModule, MatFormFieldModule, MatInputModule} from '@angular/material';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { TvSearchComponent } from './tv-search/tv-search.component';
-import { TvCastComponent } from './tv-cast/tv-cast.component'
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatButtonModule, MatToolbarModule, MatIconModule, MatCardModule, MatFormFieldModule, MatInputModule, MatTabsModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TitleSearchComponent } from './title-search/title-search.component';
+import { TvCastComponent } from './tv-cast/tv-cast.component';
+import { TvEpisodeComponent } from './tv-episode/tv-episode.component';
+import { LandingComponent } from './landing/landing.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowResultComponent,
-    TvSearchComponent,
-    TvCastComponent
+    TitleSearchComponent,
+    TvCastComponent,
+    TvEpisodeComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule, // add manually
+    HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
@@ -33,7 +36,9 @@ import { TvCastComponent } from './tv-cast/tv-cast.component'
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatTabsModule,
+    MatDividerModule
   ],
   exports: [
     FormsModule,
@@ -46,7 +51,7 @@ import { TvCastComponent } from './tv-cast/tv-cast.component'
     MatCardModule,
     BrowserAnimationsModule
   ],
-  providers: [ShowService], // auto import
+  providers: [TvService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
