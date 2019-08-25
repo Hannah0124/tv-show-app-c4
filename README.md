@@ -2,9 +2,10 @@
 Search for the name of the show in the search field
 
 ## Demo video 
-To see a demo video, click the screenshot (right). =>
+To see a demo video, click the screenshot below.
+
 <a style="float:right" href="https://www.youtube.com/watch?v=2ms87SZq3SE&feature=youtu.be&hd=1" target="_blank">
-  <img alt="Demo Video" src="https://i.ibb.co/ZM3h72h/tv-search-web-app.png" width="276" height="537" />
+  <img alt="Demo Video" src="https://i.ibb.co/ZM3h72h/tv-search-web-app.png" />
 </a>
 
 
