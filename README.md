@@ -1,5 +1,5 @@
-# Tv-show-search-app
-Search for the name of the show in the search field
+# TV-show-search-app
+By searching for the name of a TV show, you can look up genre, cast, season, episode, rating and summary information. 
 
 ## Demo video 
 To see a demo video, click the screenshot below.
@@ -14,8 +14,6 @@ To see a demo video, click the screenshot below.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### How to install
-
-What things you need to install the software and how to install them
 
 ```
 npm install
@@ -33,7 +31,7 @@ Browser: http://localhost:5100/
 ```
 
 
-## Running the tests
+## How to run test
 
 ```
 npm test
@@ -43,4 +41,4 @@ npm test
 ## Built With
 
 * [Angular](https://angular.io/) - a TypeScript-based open-source web application framework
-* [TVMAZE](https://www.tvmaze.com/api) - TV Show and web series database
+* [TVMAZE API](https://www.tvmaze.com/api) - TV Show and web series database
